@@ -30,6 +30,8 @@
               echo "Entered SCC MKDocs development environment."
               echo "Run 'mkdocs serve' to start the local server."
 
+              # XXX: this only works for developers using zsh.
+              #  Ideally, replace with an `exec $SHELL`
               export PATH=${pkgs.zsh}/bin:$PATH
               export SHELL=${pkgs.zsh}/bin/zsh
               exec ${pkgs.zsh}/bin/zsh --login
